@@ -6,7 +6,7 @@ namespace Task5
         static void Main(string[] args)
         {
             int arraySize = R.CreateSize(5, 10);
-            int[] array = R.Filling(arraySize, -10, 10);
+            int[] array = R.CreateArray(arraySize, -10, 10);
             int[] finalArray;
             R.Print(array);
             finalArray = Functions.DeleteNegative(array);

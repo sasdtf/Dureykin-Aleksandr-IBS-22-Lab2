@@ -8,17 +8,17 @@ namespace Task3
 {
     internal class Functions
     {
-        public static int Summ(int[] array)
+        public static int SumPositive(int[] array)
         {
-            int summ = 0;
+            int sumPositive = 0;
             for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] > 0)
                 {
-                    summ += array[i];
+                    sumPositive += array[i];
                 }
             }
-            return summ;
+            return sumPositive;
         }
     }
     

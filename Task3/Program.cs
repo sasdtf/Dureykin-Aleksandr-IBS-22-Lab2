@@ -6,10 +6,10 @@ namespace Task3
         static void Main(string[] args)
         {
             int arraySize = R.CreateSize(5, 10);
-            int[] array = R.Filling(arraySize, -100, 100);
+            int[] array = R.CreateArray(arraySize, -100, 100);
             R.Print(array);
-            int summ = Functions.Summ(array);
-            Console.WriteLine("\nСумма всех неотрицательных значений массива = {0}", summ);
+            int sumPositive = Functions.SumPositive(array);
+            Console.WriteLine("\nСумма всех неотрицательных значений массива = {0}", sumPositive);
         }
     }
 }

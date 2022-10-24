@@ -6,10 +6,10 @@ namespace Task4
         static void Main(string[] args)
         {
             int arraySize = R.CreateSize(5, 10);
-            int[,] array = R.Filling2(arraySize, 1, 10);
-            R.Print2(array);
-            int summ = Functions.Sum(array);
-            Console.WriteLine("\n Сумма элементов на четных позициях = {0}", summ);
+            int[,] array = Functions.CreateArray(arraySize, 1, 10);
+            Functions.Print(array);
+            int Sum = Functions.SumEvenPositions(array);
+            Console.WriteLine("\n Сумма элементов на четных позициях = {0}", Sum);
         }
     }
 }

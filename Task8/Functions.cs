@@ -9,24 +9,32 @@ namespace Task8
 {
     internal class Functions
     {
-        public static void Search(int[] array)
+        public static int[] CreatingIndexArray(int[] arr, int value)
         {
-            Console.WriteLine("\nвведите имкомый элемент \n");
-            int search = R.IntParse();
-            int check = 0;
-            for (int i = 0; i < array.Length; i++)
+            int ammount = 0;
+            int index = 0;
+            int[] arrayOfIndex = new int[arr.Length];
+            while (Array.IndexOf(arr, value, index) != -1)
             {
-                if(array[i] == search)
-                {
-                    Console.WriteLine("\nэллемент {1}={0}  \n",array[i],i+1);
-                    check++;
-                }
+                arrayOfIndex[ammount] = Array.IndexOf(arr, value, index);
+                index = arrayOfIndex[ammount] + 1;
+                ammount++;
+            }
+            Array.Resize(ref arrayOfIndex, ammount);
+            return arrayOfIndex;
+        }
 
-            }
-            if(check== 0)
+        public static int CheckingInt()
+        {
+            int number;
+            Console.Write("\nВведите искомое число : ");
+            bool check = int.TryParse(Console.ReadLine(), out number);
+            while (!check)
             {
-                Console.WriteLine("\nтакого эллемента нет \n");
+                Console.Write("Неверное значение, попробуйте снова ");
+                check = int.TryParse(Console.ReadLine(), out number);
             }
+            return number;
         }
     }
 }

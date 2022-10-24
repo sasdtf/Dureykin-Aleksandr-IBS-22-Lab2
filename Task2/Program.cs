@@ -7,10 +7,10 @@ namespace Task2
         {
             int[,,] array = Functions.CreateArray(3, -9, 9);
             Console.WriteLine(" массив:");
-            R.Print3(array);
-            Functions.Replace(array);
+            Functions.Print(array);
+            Functions.ReplacePositive(array);
             Console.WriteLine("Вид массива после изменений:");
-            R.Print3(array);
+            Functions.Print(array);
         }
     }
 }

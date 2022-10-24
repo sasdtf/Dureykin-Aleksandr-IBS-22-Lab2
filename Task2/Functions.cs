@@ -26,7 +26,23 @@ namespace Task2
             }
             return array;
         }
-        public static void Replace(int[,,] array)
+        public static void Print(int[,,] array)
+        {
+            for (int z = 0; z < array.GetLength(0); z++)
+            {
+                Console.WriteLine("{0} слой:", z + 1);
+                for (int y = 0; y < array.GetLength(0); y++)
+                {
+                    for (int x = 0; x < array.GetLength(0); x++)
+                    {
+                        Console.Write("{0}\t", array[x, y, z]);
+                    }
+                    Console.WriteLine();
+                }
+                Console.WriteLine();
+            }
+        }
+        public static void ReplacePositive(int[,,] array)
         {
             for (int z = 0; z < array.GetLength(0); z++)
               {
